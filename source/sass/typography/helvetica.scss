@@ -21,6 +21,17 @@
 }
 
 @font-face {
+    font-family: 'Helvetica LT 25 Ultra Light';
+    src: url('../fonts/helvetica/HelveticaNeueLT-UltraLight.eot');
+    src: url('../fonts/helvetica/HelveticaNeueLT-UltraLight.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helvetica/HelveticaNeueLT-UltraLight.woff') format('woff'),
+         url('../fonts/helvetica/HelveticaNeueLT-UltraLight.ttf') format('truetype'),
+         url('../fonts/helvetica/HelveticaNeueLT-UltraLight.svg#HelveticaNeueLT-UltraLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Helvetica Neue Black';
     src: url('../fonts/helvetica/HelveticaNeueLT-Black.eot');
     src: url('../fonts/helvetica/HelveticaNeueLT-Black.eot?#iefix') format('embedded-opentype'),
