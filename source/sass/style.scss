@@ -31,6 +31,30 @@ body {
 	@include background-image(linear-gradient(top,  #e9e9e9 0%,#ededed 22%,#ededed 34%,#e9e9e9 49%,#e9e9e9 100%));
 }
 
+p {
+	margin: 0 0 18px;
+}
+
+textarea {
+	resize: none;
+}
+
+input[type='text'],
+input[type='email'],
+textarea
+{
+	display: block;
+	font: 12px 'Helvetica Neue Roman', Arial, sans-serif;
+	@include border-radius(3px, 3px 3px 4px 4px); 
+	background-color: #282d34; 
+	@include box-shadow(0 1px rgba(255,255,255,.1), inset 0 1px 8px rgba(0,0,0,.25));
+	@include border-radius(5px);
+	border: none;
+	color: #fff;
+	padding: 8px 12px;
+	width: 210px;
+}
+
 img {
 	display: block;
 	max-width: 100%;
@@ -101,6 +125,43 @@ a {
 	}
 	#main {
 		@extend %wrapper;
+		position: relative;
+		.detail {
+			@include pie-clearfix;
+			margin: 36px 0 54px 0;
+			article {
+				float: left;
+				width: 620px;
+				h2 {
+					margin: 27px 0 9px;
+					font-size: 20px;
+					font-family: 'bebasregular';
+				}
+			}
+			aside {
+				float: right;
+				width: 300px;
+				dl {
+					@include pie-clearfix;
+					margin-bottom: 18px;
+					dt {
+						width: 72px;
+						clear: left;
+						font-weight: bold;
+					}
+					dt, dd {
+						float: left;
+					}
+				}
+				h2 {
+					font-size: 20px;
+					font-family: "bebasregular";
+					padding-bottom: 4px;
+					border-bottom: 1px solid #c2c2c2;
+					margin-bottom: 14px;
+				}
+			}
+		}
 	}
 	> footer {
 		background-color: #282d34;
@@ -120,20 +181,26 @@ a {
 			color: #d9e2ef;
 		}
 		aside {
-			padding: 12px 20px 1px 20px;
-			background: #2a2a2a;
+			float: right;
+			width: 440px;
 		}
 		.sosumi {
 			height: 56px;
 			background: rgba(0, 0, 0, 0.5);
+			color: #c6d1dc;
+			> div {
+				@extend %wrapper;
+			}
 		}
 	}
 }
 
 .intro {
 	h1 {
-		margin: 36px 0 0 0;
-		font: 36px/38px 'Helvetica Neue Black';
+		margin: 36px 0 6px 0;
+		font-size: 36px;
+		line-height: 38px;
+		font-family: 'bebasregular';
 	}
 	p {
 		margin: 0 0 36px 0;
@@ -149,41 +216,36 @@ a {
 	margin: 0 0 36px;
 }
 
-ul.grid {
-	border-bottom: 1px solid #c2c2c2;
-	padding-bottom: 30px;
-	margin-bottom: 30px;
-	@include pie-clearfix;
-	> li {
-		float: left;
-		width: 310px;
-		margin: 0 15px 15px 0;
-		padding: 10px;
-		background: #fff;
-		@include box-shadow(0 0 3px rgba(0, 0, 0, 0.3));
-		cursor: pointer;
-		&:nth-child(3n+3) {
-			margin-right: 0;
-		}
-		figure {
-			position: relative;
-			figcaption {
-				padding: 10px;
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				background: rgba(51, 51, 51, 0.8);
-				color: #fff;
-				text-transform: uppercase;
-				letter-spacing: 0.12px;
-				font-weight: bold;
-				span {
-					display: block;
-					text-transform: capitalize;
-					font-weight: normal;
-					font-size: 11px;
-					line-height: 16px;
+.work {
+	ul.grid {
+		border-bottom: 1px solid #c2c2c2;
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+		@include pie-clearfix;
+		> li {
+			float: left;
+			width: 310px;
+			margin: 0 15px 15px 0;
+			padding: 10px;
+			background: #fff;
+			@include box-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+			cursor: pointer;
+			&:nth-child(3n+3) {
+				margin-right: 0;
+			}
+			figure {
+				position: relative;
+				figcaption {
+					padding: 10px;
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background: rgba(51, 51, 51, 0.8);
+					color: #fff;
+					text-transform: uppercase;
+					letter-spacing: 0.12px;
+					font-weight: bold;
 				}
 			}
 		}
