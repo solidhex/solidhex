@@ -160,6 +160,26 @@ a {
 					border-bottom: 1px solid #c2c2c2;
 					margin-bottom: 14px;
 				}
+				.tags {
+					li {
+						display: inline-block;
+						margin: 0 3px 6px 0;
+						a {
+							display: inline-block;
+							@include border-radius(10px);
+							min-width: 90px;
+							padding: 5px 0;
+							text-align: center;
+							background: transparent inline-image('nav-bg10.png');
+							color: #282d34;
+							&:hover, &.active {
+								background-color: rgb(36,40,47);
+								@include background-image(inline-image('nav-bg10.png'), linear-gradient(top,  rgba(36,40,47,1) 0%,rgba(12,19,31,1) 100%));
+								color: #fff;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
