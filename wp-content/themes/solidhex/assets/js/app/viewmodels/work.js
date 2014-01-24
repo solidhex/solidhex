@@ -6,7 +6,7 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
 
     return {
 		posts: ko.observableArray([]),
-		activate: function () {		
+		activate: function () {
 			return http.get('/api/get_posts/').then(function (response) {
 				return this.posts(response.posts);
 			}.bind(this));
@@ -18,7 +18,6 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
 				greeting = arr[Math.floor(Math.random() * arr.length)];
 				
 				return greeting;
-			
 		}
     };
 });
