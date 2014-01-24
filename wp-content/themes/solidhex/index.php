@@ -3,38 +3,16 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory' ) ?>/assets/css/main.css">
-	<title></title>
+	<title>WordPress Developer Los Angeles &mdash; solidhex.com</title>
+	<meta name="viewport" content="width=device-width">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<div id="container">
-		<header>
-			<h1><a href="#">solidhex<span>dot</span>com</a></h1>
-		</header>
-		<div id="main" role="main">
-			<section class="intro">
-				<h1>Howdy!</h1>
-				<p>
-					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-				</p>
-			</section>
-			<section class="work">
-				<ul class="grid">
-					<li>
-						<figure>
-	                        <img src="http://placekitten.com/320/200">
-	                        <figcaption>
-	                                Bijouxs
-	                        </figcaption>
-                        </figure>
-					</li>
-				</ul>
-			</section>
-		</div>
-		<footer>
-			
-		</footer>
+	<div id="applicationHost">
+		
 	</div>
 	<?php wp_footer(); ?>
+	<script src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/js/lib/require/require.js" data-main="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/js/app/main"></script>
+	
 </body>
 </html>

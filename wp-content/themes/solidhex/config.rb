@@ -4,9 +4,9 @@
 http_path = "/"
 css_dir = "assets/css"
 sass_dir = "assets/css/scss"
-images_dir = "assets/img"
-javascripts_dir = "assets/js"
-fonts_dir = "assets/fonts"
+images_dir = "wp-content/themes/solidhex/assets/img"
+javascripts_dir = "wp-content/themes/solidhex/assets/js"
+fonts_dir = "wp-content/themes/solidhex/assets/fonts"
 
 output_style = :compressed
 
