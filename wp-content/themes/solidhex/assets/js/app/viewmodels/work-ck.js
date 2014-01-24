@@ -1,0 +1,1 @@
+define(["plugins/http","durandal/app","knockout"],function(e,t,n){return{posts:n.observableArray([]),activate:function(){return e.get("/api/get_posts/").then(function(e){return this.posts(e.posts)}.bind(this))},showGreeting:function(){var e=["greetings","howdy","hi","welcome","hi-ya","hello"],t;t=e[Math.floor(Math.random()*e.length)];return t}}});

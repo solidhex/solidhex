@@ -1,0 +1,1 @@
+define(["plugins/router","durandal/app"],function(e,t){return{router:e,activate:function(){e.map([{route:"",title:"Work",moduleId:"viewmodels/work",nav:!0},{route:"work/:slug",moduleId:"viewmodels/detail"},{route:"about",moduleId:"viewmodels/about",nav:!0}]).buildNavigationModel();e.updateDocumentTitle=function(){return!1};return e.activate()}}});

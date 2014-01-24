@@ -1,0 +1,18 @@
+<section class="intro">
+	<h1><span data-bind="text: showGreeting()"></span>!</h1>
+	<p>
+		My name is Patrick Jackson and I like to build stuff using <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, JavaScript &amp; WordPress.
+	</p>
+</section>
+<section class="work">
+	<ul class="grid" data-bind="foreach: posts">
+		<li>
+			<a data-bind="attr: {href: '/#work/' + slug}">
+				<figure>
+					<img data-bind="attr: {src: attachments[0].images.thumbnail.url}">
+	                <figcaption data-bind="text: title"></figcaption>
+	            </figure>
+			</a>
+		</li>
+	</ul>
+</section>
