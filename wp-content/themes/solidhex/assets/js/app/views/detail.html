@@ -1,0 +1,22 @@
+﻿<div class="detail" data-bind="with: project">
+	<article>
+		<figure>
+			<img data-bind="attr: {src: attachments[0].images.medium.url}">
+		</figure>
+		<h2 data-bind="text: title"></h2>
+		<div data-bind="html: content"></div>
+	</article>
+	<aside>
+		<h2>Project Info</h2>
+		<dl class="info">
+			<dt>Agency</dt>
+			<dd data-bind="text: custom_fields.agency"></dd>
+			<dt>Website</dt>
+			<dd><a data-bind="text: custom_fields.website, attr: {href: custom_fields.website, rel: 'noreferrer external'}"></a></dd>
+		</dl>	
+		<h2>Technologies</h2>
+		<ul class="tags" data-bind="foreach: tags">
+			<li><a data-bind="text: title"></a></li>
+		</ul>
+	</aside>
+</div>
