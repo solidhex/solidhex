@@ -1,0 +1,53 @@
+@import "compass/css3";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+@include font-face("Gotham Medium", font-files("gotham-medium-webfont.eot", "gotham-medium-webfont.svg", "gotham-medium-webfont.ttf", "gotham-medium-webfont.woff"));
+
+body {
+	border-top: 5px solid rgba(255, 255, 255, 0.3);
+	background-color: rgb(26,140,170);
+	@include background-image(linear-gradient(top,  rgba(26,140,170,1) 0%,rgba(23,125,162,1) 35%,rgba(18,117,158,1) 49%,rgba(21,116,158,1) 52%,rgba(17,112,156,1) 57%,rgba(17,104,152,1) 71%,rgba(13,99,149,1) 80%,rgba(16,99,149,1) 81%,rgba(13,99,149,1) 81%,rgba(12,96,147,1) 88%,rgba(13,92,146,1) 100%));
+	#contact {
+		$width: 580px;
+		$height: 204px;
+		width: $width;
+		height: $height;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -($height / 2);
+		margin-left: -($width / 2);
+		color: #fff;
+		text-align: center;
+		text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+		h1 {
+			font: 45px "Gotham Medium";
+			.hex {
+				&:after {
+					content: "";
+					display: inline-block;
+					width: 26px;
+					height: 28px;
+					margin-top: -1px;
+					background: image-url('hex.png');
+					vertical-align: middle;
+				}
+			}
+		}
+		a {
+			font: 12px/18px "Helvetica Neue", Helvetica, Arial;
+			color: #fff;
+			text-decoration: none;
+			letter-spacing: 0.6px;
+		}
+	}
+}

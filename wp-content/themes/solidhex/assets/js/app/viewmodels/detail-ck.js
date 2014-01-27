@@ -1,1 +1,0 @@
-define(["plugins/http","durandal/app","knockout"],function(e,t,n){return{project:n.observable(),activate:function(t){return e.get("/api/get_post/?post_slug="+t).then(function(e){return this.project(e.post)}.bind(this))}}});
